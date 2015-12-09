@@ -17,20 +17,21 @@
 
 <?php endif; ?>
 	
-	<?php $args = array(
-		'style'              	=> 'list',
-		'orderby'            	=> 'name',
-		'show_count'         	=> 0,
-		'use_desc_for_title' 	=> 0,
-		'child_of'           	=> 0,
-		'exclude'				=> '',
-		'title_li'           	=> __( '' ),
-		'show_option_none'   	=> __('No Menu Items'),
-		'number'             	=> 6,
-		'echo'               	=> 1,
-		'depth'              	=> 2,
-		'taxonomy'           	=> 'product_cat',
-	); ?>
-	<ul class="categoryList">   
-		<?php wp_list_categories( $args ); ?>
+	<?php 
+	$args = array(
+		//'orderby'	=> 'name',
+		//'exclude'	=> '',
+		'taxonomy'  => 'product_cat'
+	);
+	$categories = get_terms( $args,'' );
+	
+	?>
+	<ul class="categoryList">  
+		
+		<?php foreach( $categories  as $cate) : ?>
+		
+			<li class="cat-item-<?php echo $cate->term_id; ?>"><a href="<?php echo get_term_link($cate) ?>" title="<?php echo $cate->name;  ?>"><?php echo $cate->name;  ?></a></li>
+		
+		<?php endforeach; ?>
+		
 	</ul>

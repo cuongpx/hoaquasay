@@ -8,20 +8,17 @@ include_once("inc/pagination.php");
 //include_once("inc/visual-term-description-editor.php");
 //include_once("inc/widgets.php");
 
-//* Make Font Awesome available
-//add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
-//function enqueue_font_awesome() {
 
-//	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' );
+/*add_filter( 'woocommerce_get_price_html', 'my_price_html', 100, 2 );
 
-//}
+function my_price_html( $price, $product ){
+	if(is_product()) : 
+		return 'Giá: ' . str_replace( '<ins>', 'Giảm giá: <ins>', $price );
+	endif;
+}*/
 
-/**
- * Place a cart icon with number of items and total cost in the menu bar.
- *
- * Source: http://wordpress.org/plugins/woocommerce-menu-bar-cart/
- */
-//add_filter('wp_nav_menu_items','sk_wcmenucart', 10, 2);
+
+
 function sk_wcmenucart() {
 
 	// Check if WooCommerce is active and add a new item to a menu assigned to Primary Navigation Menu location
@@ -243,6 +240,12 @@ function html5blank_styles()
 	
 	wp_register_style('font-awesome', get_template_directory_uri() . '/style/font-awesome.css', array(), '4.3.0', 'all');
     wp_enqueue_style('font-awesome'); // Enqueue it!
+	
+	wp_register_style('woocommerce-layout-override', get_template_directory_uri() . '/style/woocommerce-layout-override.css', array(), '', 'all');
+    wp_enqueue_style('woocommerce-layout-override'); // Enqueue it!
+	
+	wp_register_style('woocommerce-override', get_template_directory_uri() . '/style/woocommerce-override.css', array(), '', 'all');
+    wp_enqueue_style('woocommerce-override'); // Enqueue it!
 
 }
 
@@ -603,13 +606,16 @@ function html5_shortcode_demo($atts, $content = null)
 	add_filter('mce_buttons_2', 'register_additional_button');
 	
 	
-	// Function to get path url
-	function path_url(){
-											
-	$Path = $_SERVER['REQUEST_URI'];
-	$URI = bloginfo('url').$Path;
-	return $URI;
-		
-	}
+		// Remove each style one by one
+		/*add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+		function jk_dequeue_styles( $enqueue_styles ) {
+			//unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+			unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+			//unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+			return $enqueue_styles;
+		}
+
+		// Or just remove them all in one line
+		add_filter( 'woocommerce_enqueue_styles', '__return_false' );*/
 
 ?>

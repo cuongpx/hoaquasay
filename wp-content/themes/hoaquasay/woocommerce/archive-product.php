@@ -14,7 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-
+<div class="container">
+	<div class="pull-left main-container">
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -89,6 +90,8 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_after_main_content' );
 	?>
 
+	</div>
+	
 	<?php
 		/**
 		 * woocommerce_sidebar hook
@@ -97,5 +100,5 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
-
+</div>
 <?php get_footer( 'shop' ); ?>

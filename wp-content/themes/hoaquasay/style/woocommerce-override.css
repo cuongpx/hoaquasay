@@ -1,0 +1,35 @@
+.product-container{padding:20px;border:1px solid #ccc;border-radius: 4px}
+ins{text-decoration:inherit}
+.page-title{font-size: 21px;margin-bottom: 15px;text-transform:capitalize}
+.titlePosts{font-size: 24px;padding: 20px 0}
+.woocommerce .woocommerce-breadcrumb{margin: 1.5em 0 2.5em;padding: 0 0 2px 5px;
+color: #777;border-bottom: 1px solid #ccc;border-left: 2px solid;font-size: .92em}
+.woocommerce .woocommerce-ordering{margin:0 0 1.5em}
+.woocommerce .woocommerce-ordering select{height: 30px;border-radius: 5px;color: #666;font-size:13px}
+.woocommerce ul.products li.product .onsale{margin: -.5em 0.5em 0 0}
+.woocommerce span.onsale{left: 0.5em;}
+.woocommerce ul.products li.product h3 {padding: .5em 0;margin: 0;font-size: 1em;text-transform: capitalize;text-align: center;}
+.woocommerce ul.products li.product h3:hover {color:#75b510}
+.woocommerce ul.products li.last{margin-right:0}
+.woocommerce ul.products li.product .price{text-align:center}
+.woocommerce ul.products li.product .price span{font-size: 17px;font-weight: bold;color: #ff2727}
+.woocommerce ul.products li.product .price del{float: left; margin-left: 18px}
+.woocommerce ul.products li.product .price del span{color: #666;font-size: 15px;font-weight: normal}
+.woocommerce ul.products li.product .button{margin: 0.5em 0 0 3.5em;background-color: #77a464;color: #fff}
+.woocommerce ul.products li.product .button:hover,.woocommerce .cart input.button:hover{background-color: rgb(125,192,20)}
+.woocommerce ul.products li.product a{font-weight:normal}
+.woocommerce a.added_to_cart{margin-left:3.5em}
+.woocommerce .cart .button, .woocommerce .cart input.button{background-color: #77a464;color: #fff;font-weight: normal;}
+.woocommerce a.button.alt{background-color:#77a464}
+.woocommerce-cart .wc-proceed-to-checkout{width:130px}
+.woocommerce-page div.product div.thumbnails a{width:70px}
+.woocommerce div.product .product_title{color:#75b510;font-size:2em;margin-bottom:10px}
+.woocommerce div.product p.price span, .woocommerce div.product span.price {    color: #B80709;font-size: 22px;font-weight: bold;}
+.woocommerce div.product p.price{margin-bottom:10px;color:#666;font-size:1.1em}
+.woocommerce div.product p.price del{color:#666}
+.woocommerce div.product p.price del span{color:#666;font-size:17px}
+.woocommerce .quantity .qty{height:2.25em}
+.related h2{font-size: 19px;margin-bottom: 25px;border-bottom: 1px solid #ccc;padding-bottom: 5px;}
+
+
+

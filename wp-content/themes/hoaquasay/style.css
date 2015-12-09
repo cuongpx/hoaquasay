@@ -60,7 +60,7 @@ font-size: 13px;line-height: 45px;padding: 0 10px}
 
 .read-more{color:#e6262b;font-size:12px;font-weight:bold;}
 
-.main-container{float:right;width:674px;}
+.main-container{width:865px;}
 
 
 .coll-left{width:298px}
@@ -75,7 +75,7 @@ font-size: 13px;line-height: 45px;padding: 0 10px}
 
 
 
-.sidebar{float:right;margin-top:28px;width:298px;}
+.sidebar{float:right;margin-top:28px;width:260px;}
 .bar{margin-bottom:20px;overflow:hidden;}
 .sidebar-menu{position:relative;}
 .sidebar-menu h3{background-color: #1ca0b7;background-image: url("image/corner.png");font-size:13px;background-position: right center;font-weight:bold;
@@ -129,7 +129,7 @@ url('fonts/font-name.svg#font-name') format('svg');font-weight:normal;font-style
 @media only screen and (min-width:480px){}
 @media only screen and (min-width:768px){}
 @media only screen and (min-width:1024px){}
-@media (min-width:1024px){.container{width:1000px}}
+@media (min-width:1024px){.container{width:1160px}}
 @media only screen and (min-width:1140px){}
 @media only screen and (min-width:1280px){}
 @media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:144dpi){}
