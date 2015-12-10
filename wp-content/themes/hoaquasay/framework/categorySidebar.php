@@ -28,9 +28,9 @@
 	?>
 	<ul class="categoryList">  
 		
-		<?php foreach( $categories  as $cate) : ?>
+		<?php $i=0; foreach( $categories  as $cate) : $i++;?>
 		
-			<li class="cat-item-<?php echo $cate->term_id; ?>"><a href="<?php echo get_term_link($cate) ?>" title="<?php echo $cate->name;  ?>"><?php echo $cate->name;  ?></a></li>
+			<li class="cat-item-<?php echo $cate->term_id; ?>"><a href="<?php echo get_term_link($cate) ?>" title="<?php echo $cate->name;  ?>"><span><?php echo $i; ?></span> <?php echo $cate->name;  ?></a></li>
 		
 		<?php endforeach; ?>
 		

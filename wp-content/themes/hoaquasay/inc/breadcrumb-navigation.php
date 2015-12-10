@@ -1,6 +1,6 @@
 <?php
 function get_breadcrumb_navigation() {
-	$delimiter = '&raquo;';
+	$delimiter = '/';
 	$home = '<i class="fa fa-home"></i> Trang chủ';
 	$before = '<span>';
 	$after = '</span>';

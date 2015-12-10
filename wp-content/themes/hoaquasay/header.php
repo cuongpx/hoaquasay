@@ -44,14 +44,14 @@
 									</a>
 									<?php else : ?>
 									<a href="<?php echo home_url(); ?>">
-										<img src="<?php bloginfo('template_directory'); ?>/image/hep-bao-quy-dau-logo.png" width="" alt="Hoa quả sấy hòa bình"/>
+										<img src="<?php bloginfo('template_directory'); ?>/image/logo-hoabinhfood.png" width="" alt="Hoa quả sấy hòa bình"/>
 										<h1 style="text-indent:-9999px;height:1px;width:1px;position: absolute;">Hoa quả sấy</h1>
 									</a>
 									<?php endif; ?>
 								<?php endif; ?>
 								<?php else : ?>
 								<a href="<?php bloginfo('url'); ?>">
-									<img src="<?php bloginfo('template_directory'); ?>/image/hep-bao-quy-dau-logo.png" width="" alt="Hoa quả sấy hòa bình"/>
+									<img src="<?php bloginfo('template_directory'); ?>/image/logo-hoabinhfood.png" width="" alt="Hoa quả sấy hòa bình"/>
 								</a>
 							<?php endif; ?>
 							</div>

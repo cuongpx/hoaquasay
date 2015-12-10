@@ -17,6 +17,13 @@ function my_price_html( $price, $product ){
 	endif;
 }*/
 
+// Change empty price
+function custom_empty_price( $price, $product ) {
+	return __( 'Liên hệ', 'WooCommerce' ) ;
+}
+add_filter( 'woocommerce_variable_empty_price_html', 'custom_empty_price', 10, 2 );
+add_filter( 'woocommerce_empty_price_html', 'custom_empty_price', 10, 2 );
+
 
 
 function sk_wcmenucart() {

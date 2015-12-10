@@ -10,8 +10,8 @@
 *:after,
 *:before{-moz-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;}
 *{margin:0;padding:0;}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;vertical-align:baseline;font-family:Arial,sans-serif;}
-h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, select, span, a, p, sub, blockquote, th, td{color:#333;font-family:Arial,sans-serif;font-size:14px;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;vertical-align:baseline;font-family:tahoma;}
+h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, select, span, a, p, sub, blockquote, th, td{color:#333;font-family:tahoma; font-size:14px;}
 @font-face {font-family: "alexander";src:url("style/fonts/UTM Alexander.ttf") format('truetype');}
 @font-face {font-family: "altergothic";src:url("style/fonts/UTM Alter Gothic.ttf") format('truetype');}
 ul, ol{list-style:none;}
@@ -53,10 +53,10 @@ font-size: 13px;line-height: 45px;padding: 0 10px}
 .sub-menu-columns li a:hover{background:rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;color:#ff0000 !important;}
 #content{width:100%;overflow:hidden;margin-top:0px;}
 .banner{margin-top:1px}
-#breadcrumb{margin-top:20px;padding:5px 0px 5px 5px;border-bottom:1px solid #ccc;}
-#breadcrumb a{font-size:13px;color:#555;padding-right:6px;}
-#breadcrumb a:hover{color:#1f4f82}
-#breadcrumb span{font-size:13px;color:#888}
+#breadcrumb,.woocommerce .woocommerce-breadcrumb{margin-top: 20px;padding: 0px 0px 2px 8px;border-bottom: 1px solid #ccc;border-left: 3px solid #77a464}
+#breadcrumb a,.woocommerce .woocommerce-breadcrumb a{font-size:13px;color:#555}
+#breadcrumb a:hover,.woocommerce .woocommerce-breadcrumb a:hover{color:#77a464}
+#breadcrumb span,.woocommerce .woocommerce-breadcrumb span{font-size:13px;color:#888}
 
 .read-more{color:#e6262b;font-size:12px;font-weight:bold;}
 
@@ -78,15 +78,26 @@ font-size: 13px;line-height: 45px;padding: 0 10px}
 .sidebar{float:right;margin-top:28px;width:260px;}
 .bar{margin-bottom:20px;overflow:hidden;}
 .sidebar-menu{position:relative;}
-.sidebar-menu h3{background-color: #1ca0b7;background-image: url("image/corner.png");font-size:13px;background-position: right center;font-weight:bold;
-background-repeat: no-repeat;height: 30px;color:#fff;position: absolute;text-transform: uppercase;line-height: 29px;text-indent: 15px;width: 298px;}
-.sidebar-menu{}
-.categoryList{padding:0;position:relative;margin-top:38px}
-.categoryList li{padding-bottom:6px;}
+.sidebar-menu h3{background-color: rgb(65,56,56);font-size: 14px;font-weight: bold;height: 38px;
+color: #fff;text-transform: uppercase;line-height: 38px;text-indent: 15px;margin-bottom: 3px;}
+.categoryList{padding: 0;position: relative;clear: both;}
+.categoryList li{padding-bottom: 1px;}
 .categoryList li:last-child{padding-bottom:0 !important;}
-.categoryList li a{color: #1ca0b7;display: block;font-size: 13px;padding: 8px 0 8px 13px;text-indent: 25px;
-background: #f0f0f0 url('image/arrow-cat.png')no-repeat 11px 10px;text-transform: uppercase;}
+.categoryList li a{color: rgb(106,169,7);
+    display: block;
+    font-size: 14px;
+    padding: 6px 0 0px 13px;
+    text-indent: 0px;
+    background: #f0f0f0;
+    text-transform: capitalize;}
 .current-cat a,.categoryList li a:hover{color:#ff7200 !important;}
+.categoryList li a span{padding: 1px 6px;
+    background-color: #77a464;
+    border-radius: 11px;
+    color: #fff;margin-right:4px;
+    font-size: 13px;}
+.categoryList li:nth-child(even) a span{background-color: #ff7200;}
+.categoryList li a:hover span{background-color:#ff7200 !important;}
 
 
 	
@@ -118,8 +129,12 @@ background: #f0f0f0 url('image/arrow-cat.png')no-repeat 11px 10px;text-transform
 .entry-content a{color:#0f6e90;}
 
 
-#site-footer{clear:both;margin-top:20px;background-color:#4caed4;border-top:10px solid #3f94be;}
-
+#site-footer{clear: both;margin-top: 20px;background-color: #f9f9f9;border-top: 1px solid #eee;padding: 20px 0;}
+.address{padding-left:0}
+.address  h3{text-transform: uppercase;font-size: 15px;font-weight: bold;margin-bottom: 10px;}
+.address p{line-height:24px}
+.coppyright{padding-right: 0;margin-top: 84px;}
+.coppyright p{float:right}
 
 @font-face{font-family:'Font-Name';src:url('fonts/font-name.eot');src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
 url('fonts/font-name.woff') format('woff'),
@@ -180,5 +195,5 @@ div.wpcf7-response-output{overflow:hidden;}
 .pagination{margin:25px 0 30px !important;}
 .pagination a, .pagination span{border:1px solid rgb(206,206,206);padding:5px 10px;margin:0 3px;color:#000;}
 .pagination span{background:#1b6b87;color:#fff;}
-@media screen and (-webkit-min-device-pixel-ratio:0){.categoryList li a{padding-bottom:9px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){.categoryList li a{padding-bottom:6px;}
 }

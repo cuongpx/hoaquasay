@@ -16,7 +16,7 @@ global $product, $woocommerce_loop;
 if ( empty( $product ) || ! $product->exists() ) {
 	return;
 }
-
+$posts_per_page = 6;
 $related = $product->get_related( $posts_per_page );
 
 if ( sizeof( $related ) == 0 ) return;

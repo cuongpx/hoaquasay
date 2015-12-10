@@ -5,14 +5,14 @@
             <footer id="site-footer"><!--Start site-footer-->
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="address col-md-6">
 						<?php if( function_exists('ot_get_option')) : 
 							$address_footer = ot_get_option( 'address_footer');
 						?>
 							<?php echo $address_footer;  ?>
 						<?php endif; ?>
 						</div>
-						<div class="pull-right col-md-6">
+						<div class="coppyright col-md-6">
 							<?php if( function_exists('ot_get_option')) : 
 								$coppyright_footer = ot_get_option( 'coppyright_footer');
 							?>
