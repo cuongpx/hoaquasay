@@ -36,10 +36,20 @@ body{}
 .top-header {background: #3e3e3e none repeat scroll 0 0;height: 40px;padding-top: 7px;}
 .top-social > p {color: #fff;float: left;line-height: 28px;font-size: 12px;}
 .top-social a {float: left;margin-right: 10px;}
-.frm-search form{width:240px;} 
+.frm-search form{width:290px;margin-top:30px} 
 #frmSearch, #frmSubmit {height: 26px;font-size: 13px;}
-#frmSearch{}
-#frmSubmit{background-color: #242424;color: #fff;border: none;}
+#frmSearch{width: 210px;
+    border-top-left-radius: 5px;
+    border: 1px solid;
+    border-bottom-left-radius: 5px;
+    height: 28px;}
+#frmSubmit{    background: linear-gradient(to bottom, #85ca18 0%,#74b40f 100%);
+    color: #fff;
+    border: none;
+    width: 64px;
+    margin-left: -6px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;}
 .fa-search{position:relative;top:-2px}
 #site-navigation{float:left;height:45px;width:100%;background-color:#362f2f;border-top:1px solid #534b4b;    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -47,7 +57,7 @@ body{}
 #site-navigation ul{padding:0;margin:0 auto}
 #site-navigation ul li{float:left;position:relative;}
 #site-navigation ul li a{color: #fff;display: block;font-weight:bold;
-font-size: 13px;line-height: 45px;padding: 0 10px}
+font-size: 13px;line-height: 45px;padding: 0 15px}
 #site-navigation ul li a:hover{color:#ff7200;transition:ease all 0.6s;}
 
 .sub-menu-columns li a:hover{background:rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;color:#ff0000 !important;}
@@ -78,8 +88,8 @@ font-size: 13px;line-height: 45px;padding: 0 10px}
 .sidebar{float:right;margin-top:28px;width:260px;}
 .bar{margin-bottom:20px;overflow:hidden;}
 .sidebar-menu{position:relative;}
-.sidebar-menu h3{background-color: rgb(65,56,56);font-size: 14px;font-weight: bold;height: 38px;
-color: #fff;text-transform: uppercase;line-height: 38px;text-indent: 15px;margin-bottom: 3px;}
+.sidebar h3{background-color: rgb(65,56,56);font-size: 14px;height: 38px;border-left:3px solid #77a464;
+color: #fff;text-transform: uppercase;line-height: 38px;text-indent: 15px;margin-bottom: 3px;font-weight: bold}
 .categoryList{padding: 0;position: relative;clear: both;}
 .categoryList li{padding-bottom: 1px;}
 .categoryList li:last-child{padding-bottom:0 !important;}
@@ -122,7 +132,7 @@ color: #fff;text-transform: uppercase;line-height: 38px;text-indent: 15px;margin
 .entry-container h5{font-size:20px}
 .entry-container h6{font-size:18px}
 .entry-container{color:#474646;margin-bottom:25px;line-height:27px;}
-.entry-content ul li{list-style: disc !important;
+.entry-content ul li{
     margin-left: 20px;padding:3px 0}
 .entry-content ul li a{}
 .entry-content ul li a:hover{}

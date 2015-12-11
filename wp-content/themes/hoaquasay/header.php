@@ -58,19 +58,22 @@
 						</div>
 						<div class="col-md-4">
 							<div class="frm-search">
-								<form class="input-group pull-right" action="<?php echo home_url(); ?>" method="GET">
+							
+								<!--<form class="input-group pull-right" action="<?php echo home_url(); ?>" method="GET">
 									<input id="frmSearch" type="search" class="form-control" placeholder="Tìm kiếm..." name="s"/>
 									<span class="input-group-btn">
 										<button id="frmSubmit" class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
 									</span>
-								</form>
+								</form>-->
+								<?php wc_get_template_part( 'woocommerce/product-searchform' ); ?>
+								
 							</div>
 						</div>
 						
-						<div class="col-md-4">
-							<?php
-								sk_wcmenucart();
-							?>
+						<div class="cart-box col-md-4">
+								<?php
+									sk_wcmenucart();
+								?>
 						</div>
 					</div>
 				</div>

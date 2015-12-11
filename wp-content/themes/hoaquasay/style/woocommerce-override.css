@@ -6,26 +6,27 @@ ins{text-decoration:inherit}
 .woocommerce .woocommerce-ordering select{height: 30px;border-radius: 5px;color: #666;font-size:13px}
 .woocommerce ul.products li.product .onsale{margin: -.5em 0.5em 0 0}
 .woocommerce span.onsale{left: 0.5em;}
- .woocommerce.columns-3 ul.products li.product{width: 31.6%;}
-.woocommerce ul.products li.product h3 {padding: .5em 0;margin: 0;font-size: 1em;text-transform: capitalize;text-align: center;}
+ .woocommerce.columns-3 ul.products li.product{width: 31.6%}
+.woocommerce ul.products li.product h3 {padding: .5em 0;margin: 0;font-size: 1em;text-transform: capitalize;text-align: center}
 .woocommerce ul.products li.product h3:hover {color:#75b510}
 .woocommerce ul.products li.last{margin-right:0}
 .woocommerce ul.products li.product .price{text-align:center;font-size:18px;color: #ff2727}
 .woocommerce ul.products li.product .price span{font-size: 17px;font-weight: bold;color: #ff2727}
-.woocommerce ul.products li.product .price del{float: left; margin-left: 18px}
+.woocommerce ul.products li.product .price del{float: left; margin-left: 18px;color:#666}
 .woocommerce ul.products li.product .price del span{color: #666;font-size: 15px;font-weight: normal}
 .woocommerce ul.products li.product .button{margin: 0.5em 0 0 3.5em;background-color: #77a464;color: #fff}
 .woocommerce ul.products li.product .button:hover,
 .woocommerce .cart input.button:hover,
-.woocommerce button.button.alt:hover{background-color: rgb(125,192,20)}
+.woocommerce button.button.alt:hover,
+.woocommerce a.button:hover{background-color: #77a464}
 .woocommerce ul.products li.product a{font-weight:normal}
 .woocommerce a.added_to_cart{margin-left:3.5em}
 .woocommerce .cart .button, .woocommerce .cart input.button{background-color: #77a464;color: #fff;font-weight: normal;}
-.woocommerce a.button.alt,.woocommerce button.button.alt{background-color:#77a464}
+.woocommerce a.button.alt,.woocommerce button.button.alt{background-color:rgb(125,192,20)}
 .woocommerce-cart .wc-proceed-to-checkout{width:130px}
 .woocommerce-page div.product div.thumbnails a{width:70px}
 .woocommerce div.product .product_title{color:#75b510;font-size:2em;margin-bottom:10px}
-.woocommerce div.product p.price span, .woocommerce div.product span.price {    color: #B80709;font-size: 22px;font-weight: bold;}
+.woocommerce div.product p.price span, .woocommerce div.product span.price {    color: #B80709;font-size: 22px;font-weight: bold}
 .woocommerce div.product p.price{margin-bottom:10px;color:#666;font-size:1.1em}
 .woocommerce div.product p.price del{color:#666}
 .woocommerce div.product p.price del span{color:#666;font-size:17px}
@@ -35,15 +36,22 @@ ins{text-decoration:inherit}
 .related ul.products li:nth-child(3){margin-right:0}
 .related ul.products li:nth-child(6){margin-right:0}
 .tagged-meta{margin:10px 0}
-.tagged-meta span{color: #5C5B5B !important;font-size: 14px;font-weight: bold;}
-.main-product h2.pro-title{font-size: 19px;
-    text-transform: capitalize;
-    margin: 15px 0;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    border-left: 3px solid #77a464;
-    text-indent: 12px;}
-
+.tagged-meta span{color: #5C5B5B !important;font-size: 14px;font-weight: bold}
+.main-product h2.pro-title{font-size: 19px;text-transform: capitalize;margin: 15px 0;border-bottom: 1px solid #ccc;padding-bottom: 5px;border-left: 3px solid #77a464;text-indent: 12px;}
+#woocommerce_products-2{margin-bottom:15px}
+.woocommerce ul.product_list_widget li{padding: 9px 0}
+.woocommerce ul.product_list_widget li a span.product-title:hover{color:#ff7200}
+.woocommerce ul.product_list_widget li span.amount{font-weight:bold}
+.woocommerce ul.product_list_widget li del span.amount{color:#666;font-weight:normal}
+.woocommerce ul.product_list_widget li img{width:64px}
+.woocommerce a.button{background-color:rgb(125,192,20);color:#fff}
+.cart-box{padding-right:0}
+.woocommerce-cart-product{margin-top: 22px;float: right;}
+.woocommerce-cart-product a.woocommerce-cart-item{background: linear-gradient(to bottom, #85ca18 0%,#74b40f 100%);display: block;
+max-width: 190px !important;padding: 8px 54px 8px 10px;color: #fff;font-size:15px;border-radius: 5px;}
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;}
 
 
 

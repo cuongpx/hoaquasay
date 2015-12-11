@@ -17,6 +17,49 @@ function my_price_html( $price, $product ){
 	endif;
 }*/
 
+// remove Order Notes from checkout field in Woocommerce
+add_filter( 'woocommerce_checkout_fields' , 'alter_woocommerce_checkout_fields' );
+function alter_woocommerce_checkout_fields( $fields ) {
+     //unset($fields['billing']['billing_first_name']); // remove the customer's First Name for billing
+     //unset($fields['billing']['billing_last_name']); // remove the customer's last name for billing
+     unset($fields['billing']['billing_company']); // remove the option to enter in a company
+     //unset($fields['billing']['billing_address_1']); // remove the first line of the address
+     //unset($fields['billing']['billing_address_2']); // remove the second line of the address
+     //unset($fields['billing']['billing_city']); // remove the billing city
+     unset($fields['billing']['billing_postcode']); // remove the ZIP / postal code field
+     unset($fields['billing']['billing_country']); // remove the billing country
+     unset($fields['billing']['billing_state']); // remove the billing state
+     //unset($fields['billing']['billing_email']); // remove the billing email address - note that the customer may not get a receipt!
+    // unset($fields['billing']['billing_phone']); // remove the option to enter in a billing phone number
+     //unset($fields['shipping']['shipping_first_name']);
+     //unset($fields['shipping']['shipping_last_name']);
+     unset($fields['shipping']['shipping_company']);
+     //unset($fields['shipping']['shipping_address_1']);
+     //unset($fields['shipping']['shipping_address_2']);
+     unset($fields['shipping']['shipping_city']);
+     unset($fields['shipping']['shipping_postcode']);
+     unset($fields['shipping']['shipping_country']);
+     unset($fields['shipping']['shipping_state']);
+     //unset($fields['account']['account_username']); // removing this or the two fields below would prevent users from creating an account, which you can do via normal WordPress + Woocommerce capabilities anyway
+     //unset($fields['account']['account_password']);
+     //unset($fields['account']['account_password-2']);
+     //unset($fields['order']['order_comments']); // removes the order comments / notes field
+     return $fields;
+}
+
+
+
+
+// Add save percent next to sale item prices.
+/*add_filter( 'woocommerce_sale_price_html', 'woocommerce_custom_sales_price', 10, 2 );
+function woocommerce_custom_sales_price( $price, $product ) {
+    $percentage = round( ( ( $product->regular_price - $product->sale_price ) / $product->regular_price ) * 100 );
+    return $price . sprintf( __(' Giảm %s', 'woocommerce' ), $percentage . '%' );
+}*/
+
+
+
+
 // Change empty price
 function custom_empty_price( $price, $product ) {
 	return __( 'Liên hệ', 'WooCommerce' ) ;
@@ -39,22 +82,25 @@ function sk_wcmenucart() {
 		$cart_url = $woocommerce->cart->get_cart_url();
 		$shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
 		$cart_contents_count = $woocommerce->cart->cart_contents_count;
-		$cart_contents = sprintf(_n('%d Sản phẩm', '%d Giỏ hàng', $cart_contents_count, 'hoaquasay'), $cart_contents_count);
-		$cart_total = $woocommerce->cart->get_cart_total();
+		$cart_contents = sprintf(_n('(%d) Sản phẩm', '(%d) Sản phẩm', $cart_contents_count, 'hoaquasay'), $cart_contents_count);
+		//$cart_total = $woocommerce->cart->get_cart_total();
 		// Uncomment the line below to hide nav menu cart item when there are no items in the cart
 		// if ( $cart_contents_count > 0 ) {
 			if ($cart_contents_count == 0) {
-				$menu_item = '<li class="right"><a class="wcmenucart-contents" href="'. $shop_page_url .'" title="'. $start_shopping .'">';
+				$menu_item = '<div class="woocommerce-cart-product">
+				<a class="woocommerce-cart-item" href="'. $shop_page_url .'" title="'. $start_shopping .'"><b>Giỏ hàng</b><br/>';
 			} else {
-				$menu_item = '<li class="right"><a class="wcmenucart-contents" href="'. $cart_url .'" title="'. $viewing_cart .'">';
+				$menu_item = '<div class="woocommerce-cart-product">
+				<a class="woocommerce-cart-item" href="'. $cart_url .'" title="'. $viewing_cart .'"><b>Giỏ hàng</b><br/>';
 			}
 
 			$menu_item .= '<i class="fa fa-shopping-cart"></i> ';
 
-			$menu_item .= $cart_contents.' '. $cart_total;
-			$menu_item .= '</a></li>';
+			$menu_item .= $cart_contents;
+			//$menu_item .= $cart_contents.' '. $cart_total; old
+			$menu_item .= '</a></div>';
 		// Uncomment the line below to hide nav menu cart item when there are no items in the cart
-		// }
+		 //}
 		echo $menu_item;
 	//$social = ob_get_clean();
 	//return $menu . $social;
