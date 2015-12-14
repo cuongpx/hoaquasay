@@ -1,7 +1,7 @@
 .product-container{padding:20px;border:1px solid #ccc;border-radius: 4px}
 ins{text-decoration:inherit}
 .page-title{font-size: 21px;margin-bottom: 15px;text-transform:capitalize}
-.titlePosts{font-size: 24px;padding: 20px 0}
+.titlePosts{font-size: 24px;padding: 20px 0 5px}
 .woocommerce .woocommerce-ordering{margin:0 0 1.5em}
 .woocommerce .woocommerce-ordering select{height: 30px;border-radius: 5px;color: #666;font-size:13px}
 .woocommerce ul.products li.product .onsale{margin: -.5em 0.5em 0 0}
@@ -37,7 +37,7 @@ ins{text-decoration:inherit}
 .related ul.products li:nth-child(6){margin-right:0}
 .tagged-meta{margin:10px 0}
 .tagged-meta span{color: #5C5B5B !important;font-size: 14px;font-weight: bold}
-.main-product h2.pro-title{font-size: 19px;text-transform: capitalize;margin: 15px 0;border-bottom: 1px solid #ccc;padding-bottom: 5px;border-left: 3px solid #77a464;text-indent: 12px;}
+.main-product h2.pro-title{font-size: 19px;text-transform: capitalize;margin:0 15px 0;border-bottom: 1px solid #ccc;padding-bottom: 5px;border-left: 3px solid #77a464;text-indent: 12px;}
 #woocommerce_products-2{margin-bottom:15px}
 .woocommerce ul.product_list_widget li{padding: 9px 0}
 .woocommerce ul.product_list_widget li a span.product-title:hover{color:#ff7200}

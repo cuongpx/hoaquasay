@@ -46,50 +46,9 @@
 					<td style="padding-left: 30px; position: relative; top: 8px;"><div class="g-plusone" style="padding-left:20px;"></div></td>
 					</table>
 				</div>
-		<?php 
-			 $orig_post = $post;
-			global $post;
-			$categories = get_the_category($post->ID);
-
-			if ($categories) {
-			$cate_ids = array();
-			foreach($categories as $individual_tag) $cate_ids[] = $individual_tag->term_id;
-				
-			$args=array(
-			'category__in' => $cate_ids,
-			'post__not_in' => array($post->ID),
-			'posts_per_page'=>10,
-			'caller_get_posts'=>1
-			);
 			
-			$my_query = new wp_query( $args );
-			
-			//var_dump($my_query);
-			$i = 0;
-			if( $my_query->have_posts() ) {
-			echo '<div id="relatedposts" class="posts-related"><h3>Bài viết liên quan</h3><ul>';
-			while( $my_query->have_posts() ) {
-				$i++;
-			$my_query->the_post(); ?>
-			<li <?php if($i%2==0){echo "class='liActive'";}else{echo "";} ?>>
-				<div class="thumb-related"><a href="<?php the_permalink()?>" rel="" title="<?php the_title(); ?>"> <?php if (has_post_thumbnail()) {
-							the_post_thumbnail('post_thumbnail');
-							} else { echo '<img src="http://placehold.it/115x86">'; }
-						?></a>
-				</div>
-				<div class="intro-related">
-					<h4><a href="<?php the_permalink()?>" rel="" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-					<p><?php the_excerpt();?></p>
-				</div>
-			</li>
-			<?php }
-			echo '</ul></div>';
-			}
-			}
-			$post = $orig_post;
-			wp_reset_postdata(); 
-			?>
-			
+				<?php get_template_part('framework/relatedposts'); ?>
+							
 		</div>
 	
 	</div>

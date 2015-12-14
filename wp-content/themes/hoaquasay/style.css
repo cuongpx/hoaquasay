@@ -30,7 +30,7 @@ body{}
 #head-box{background:url('image/bg-header.png') repeat-x;height:103px;width:100%}
 .container{padding:0;}
 .banner > img{width:100%;}
-.logo img{float:left;margin:10px 0 52px;}
+.logo img{float:left;margin:25px 0 44px;}
 .search-phone{margin-top:25px;width:498px;}
 .contact-support{margin-top:15px;}
 .top-header {background: #3e3e3e none repeat scroll 0 0;height: 40px;padding-top: 7px;}
@@ -38,18 +38,11 @@ body{}
 .top-social a {float: left;margin-right: 10px;}
 .frm-search form{width:290px;margin-top:30px} 
 #frmSearch, #frmSubmit {height: 26px;font-size: 13px;}
-#frmSearch{width: 210px;
-    border-top-left-radius: 5px;
-    border: 1px solid;
-    border-bottom-left-radius: 5px;
-    height: 28px;}
-#frmSubmit{    background: linear-gradient(to bottom, #85ca18 0%,#74b40f 100%);
-    color: #fff;
-    border: none;
-    width: 64px;
-    margin-left: -6px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;}
+#frmSearch{width: 210px;border-top-left-radius: 5px;
+    border: 1px solid;padding-left:6px;
+    border-bottom-left-radius: 5px;height: 28px;}
+#frmSubmit{background: linear-gradient(to bottom, #85ca18 0%,#74b40f 100%);color: #fff;margin-left: -6px;
+    border: none;width: 64px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
 .fa-search{position:relative;top:-2px}
 #site-navigation{float:left;height:45px;width:100%;background-color:#362f2f;border-top:1px solid #534b4b;    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -72,9 +65,16 @@ font-size: 13px;line-height: 45px;padding: 0 15px}
 
 .main-container{width:865px;}
 
+.list-post{height: 130px;margin: 15px 0;}
+.post-intro{width:666px}
+.post-intro h2{margin-bottom:6px}
+.post-intro h2 a{font-size: 16px;font-weight: bold;color: #77a464;}
+.post-intro h2 a:hover{color:#ff7200}
+
+
 
 .coll-left{width:298px}
-.left{margin-bottom:20px;overflow:hidden;}
+.left{}
 
 .coll-main{width:648px;}
 
@@ -109,19 +109,25 @@ color: #fff;text-transform: uppercase;line-height: 38px;text-indent: 15px;margin
 .categoryList li:nth-child(even) a span{background-color: #ff7200;}
 .categoryList li a:hover span{background-color:#ff7200 !important;}
 
+.meta-posts{font-style:italic;font-size:13px}
 
+.related-title{height:46px}
+.col-related h4{}
+.col-related h4 a{color:#77a464;font-size:14px;font-weight:bold;display:block;line-height:17px}
+.col-related h4 a:hover{color:#ff7200}
 	
 .posts-related{margin:20px 0;}
-.posts-related h3{border-bottom:1px solid #c6c6c6;color:#1f4f82;font-weight:bold;padding:0 13px 10px 0;text-transform:uppercase}
+.posts-related h3{border-bottom:1px solid #c6c6c6;color:#333;font-weight:bold;text-indent:8px;
+padding:0 13px 6px 0;text-transform:uppercase;margin-bottom:20px;border-left:3px solid}
 .posts-related ul{clear:both;list-style-type:none;margin-top:3px;overflow:hidden;padding:10px 0 0;}
 .posts-related ul li{border-bottom:1px dotted #ccc;float:left;height:120px;overflow:hidden;padding:10px 0;width:336px;}
 .thumb-related{float:left;}
-.intro-related{float:left;height:90px;margin-left:10px;overflow:hidden;width:196px;}
+.intro-related{float:left;height:76px;overflow:hidden}
 .thumb-related img{border:1px solid #ccc;padding:1px;}
 .intro-related h4{font-weight:bold;margin-bottom:3px;}
 .intro-related h4 a{color:#cd5a24;font-size:14px;}
 .intro-related h4 a:hover{color:#1f4f82}
-.intro-related > p{color:#555;font-size:13px;height:53px;overflow:hidden;}
+.intro-related > p{color:#555;font-size:14px;height:58px;overflow:hidden;margin-top:6px}
 .entry-content{text-align:justify;}
 .entry-content img{max-width:100%}
 .entry-content p{padding-top:5px;padding-bottom:5px;line-height:24px;}
@@ -204,6 +210,6 @@ div.wpcf7-response-output{overflow:hidden;}
 .fa.fa-caret-right{float:left;color: #1f4f82;}
 .pagination{margin:25px 0 30px !important;}
 .pagination a, .pagination span{border:1px solid rgb(206,206,206);padding:5px 10px;margin:0 3px;color:#000;}
-.pagination span{background:#1b6b87;color:#fff;}
+.pagination span{background:linear-gradient(to bottom, #85ca18 0%,#74b40f 100%);color:#fff;}
 @media screen and (-webkit-min-device-pixel-ratio:0){.categoryList li a{padding-bottom:6px;}
 }
